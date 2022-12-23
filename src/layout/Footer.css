@@ -1,14 +1,18 @@
 .footer {
-  background-color: #191970;
+  background-color: #101820ff;
   color: #fff;
   padding: 3em;
   text-align: center;
 }
 
 .social_list {
+  color: #101820ff;
   display: flex;
   justify-content: center;
   list-style-type: none;
+}
+.social_list :hover {
+  color: #fee715ff;
 }
 
 .social_list li {
@@ -16,7 +20,7 @@
 }
 
 .social_list li:hover {
-  color: #ffff00;
+  color: #fff;
 }
 
 .social_list svg {
@@ -24,11 +28,10 @@
   cursor: pointer;
 }
 
-.copy_right {
+.texto {
   margin-top: 2em;
 }
 
-.copy_right span {
+.texto span {
   font-weight: bold;
-  color: #ffff00;
 }

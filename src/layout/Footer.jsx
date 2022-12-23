@@ -21,7 +21,7 @@ function Footer() {
           </a>
         </li>
       </ul>
-      <p className="copy_right">
+      <p className="texto">
         <p>Trabalho de Sistemas Distribuídos</p>
       </p>
     </footer>

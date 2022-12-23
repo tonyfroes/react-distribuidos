@@ -6,10 +6,10 @@ import HistoryChart from "./History.jsx";
 function Chart() {
   const location = useLocation();
   const { id } = location.state;
+  const { name } = location.state;
   const { response } = useAxios(
     `coins/${id}?localization=false&tickers=false&market_data=false&community_data=false&sparkline=false`
   );
-  console.log("NOME DO ID: " + id);
   if (!response)
     return (
       <div className="chart-container">
@@ -18,16 +18,25 @@ function Chart() {
     );
 
   return (
-    <div className="my-6">
+    <div className="coin-div-principal">
       <HistoryChart />
-      <div className="flex gap-2 items-center">
-        <img src={response.image.small} alt={response.name} />
+      <div className="principal-container">
+        <img
+          src={response.image.small}
+          alt={response.name}
+          href
+          className="text-blue-600 underline"
+        />
         <h1 className="text-2xl mb-2 capitalize font-bold">{response.name}</h1>
       </div>
       <p
-        className="mt-6 text-gray-500 [&>a]:text-blue-600 [&>a]:underline"
+        className="texto-cripto"
         dangerouslySetInnerHTML={{ __html: response.description.en }}
       ></p>
+      <a
+        href
+        dangerouslySetInnerHTML={{ __html: response.links.homepage[0] }}
+      ></a>
     </div>
   );
 }

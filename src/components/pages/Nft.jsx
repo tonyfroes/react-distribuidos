@@ -14,7 +14,6 @@ function Nft() {
       )
       .then((res) => {
         setTokens(res.data);
-        console.log(res.data);
       })
       .catch((error) => console.log(error));
   }, []);
