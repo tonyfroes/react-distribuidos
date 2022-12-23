@@ -2,10 +2,13 @@ import "./Home.css";
 import Coin from "./Coin.jsx";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import useAxios from "./hooks/useAxios";
+import CoinTrending from "./CoinTrending";
 
 function Home() {
   const [coins, setCoins] = useState([]);
   const [search, setSearch] = useState("");
+  const { response, loading } = useAxios("search/trending");
 
   useEffect(() => {
     axios
@@ -25,10 +28,24 @@ function Home() {
   const filteredCoins = coins.filter((coin) =>
     coin.name.toLowerCase().includes(search.toLowerCase())
   );
+  if (loading) {
+    return (
+      <div className="wrapper-container mt-8">
+        <h1>Carregando...</h1>
+      </div>
+    );
+  }
 
   return (
     <div className="coin-app">
       <div className="coin-search">
+        <div className="trending-coin">
+          <h1 className="trending-text">Trending</h1>
+          {response &&
+            response.coins.map((coin) => (
+              <CoinTrending key={coin.item.coin_id} coin={coin.item} />
+            ))}
+        </div>
         <h1 className="coin-text">Digite nome da moeda</h1>
         <form>
           <input
