@@ -41,7 +41,7 @@
 .open-sea-button {
   background-color: #44c767;
   border-radius: 28px;
-  border: 1px solid #18ab29;
+  border: 1px solid #FEE715FF;
   display: inline-block;
   cursor: pointer;
   color: #ffffff;
@@ -82,4 +82,8 @@
   100% {
     background: #33cccc;
   }
+}
+
+.searching-pt {
+  padding-top: 40px;
 }

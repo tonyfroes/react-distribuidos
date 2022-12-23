@@ -13,7 +13,7 @@
 
 .segundo-container {
   width: 400px;
-  border: 1px solid white;
+  border: 1px solid #fee715ff;
   border-radius: 20px;
   padding: 50px;
   margin: auto;
@@ -60,5 +60,12 @@
     transform: translateY(-1000px) rotate(720deg);
     opacity: 0;
     border-radius: 50%;
+  }
+}
+
+@media (max-width: 500px) {
+  .segundo-container {
+    width: 90%;
+    padding: 50px 5px;
   }
 }

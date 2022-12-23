@@ -13,15 +13,13 @@ function Navbar() {
           <img className="logo" src={logo} alt="Costs"></img>
         </Link>
         <ul className="list">
-          <li className="item">
-            <Link to="/">Home</Link>
-          </li>
-          <li className="item">
-            <Link to="/nft">NFT</Link>
-          </li>
-          <li className="item">
-            <Link to="/sobre">Sobre</Link>
-          </li>
+          {[{ name: 'Crypto Coins', link: '/' }, { name: 'NFT', link: '/nft' }, { name: 'Sobre', link: '/sobre' }].map((item, index) =>
+          (
+            <li key={index} className="item">
+              <Link to={item.link}>{item.name}</Link>
+            </li>
+          ))}
+
         </ul>
       </Container>
     </nav>

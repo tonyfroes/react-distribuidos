@@ -13,15 +13,14 @@
   justify-content: start;
   align-items: center;
   height: 80px;
-  border-bottom: 1px solid #d7d7d7;
+  border-bottom: 1px solid #FEE715FF;
   width: 900px;
 }
 
 .coin {
   display: flex;
   align-items: center;
-  padding-right: 24px;
-  min-width: 300px;
+  padding: 0 0.7em;
 }
 
 .coin h1 {
@@ -41,6 +40,7 @@
 
 .coin-data {
   display: flex;
+  flex-wrap: wrap;
   text-align: right;
   justify-content: space-between;
   width: 100%;
@@ -68,4 +68,11 @@
 
 .green {
   color: #11d811;
+}
+
+@media (max-width: 1000px) {
+  .coin-row {
+    flex-wrap: wrap;
+    width: 90%;
+  }
 }

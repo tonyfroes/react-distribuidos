@@ -29,17 +29,14 @@ function Nft() {
 
   return (
     <div className="token-app">
-      <div className="token-search">
-        <h1 className="token-text">Digite nome do NFT</h1>
-        <form>
-          <input
-            className="token-input"
-            type="text"
-            onChange={handleChange}
-            placeholder="Pesquisar"
-          />
-        </form>
-      </div>
+      <form className="searching-pt">
+        <input
+          className="coin-input"
+          type="text"
+          onChange={handleChange}
+          placeholder="Digite o nome da NFT"
+        />
+      </form>
       {filteredTokens.map((token) => {
         return <Token key={token.id} name={token.name} />;
       })}

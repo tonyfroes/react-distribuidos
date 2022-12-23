@@ -40,22 +40,23 @@ function Home() {
     <div className="coin-app">
       <div className="coin-search">
         <div className="trending-coin">
-          <h1 className="trending-text">Trending</h1>
-          {response &&
-            response.coins.map((coin) => (
-              <CoinTrending key={coin.item.coin_id} coin={coin.item} />
-            ))}
+          <h1 className="trending-text primary-text">Trending</h1>
+          <div className="coin-tranding-bg">
+            {response &&
+              response.coins.map((coin) => (
+                <CoinTrending key={coin.item.coin_id} coin={coin.item} />
+              ))}
+          </div>
         </div>
-        <h1 className="coin-text">Digite nome da moeda</h1>
-        <form>
-          <input
-            className="coin-input"
-            type="text"
-            onChange={handleChange}
-            placeholder="Pesquisar"
-          />
-        </form>
       </div>
+      <form>
+        <input
+          className="coin-input"
+          type="text"
+          onChange={handleChange}
+          placeholder="Digite o nome da moeda"
+        />
+      </form>
       {filteredCoins.map((coin) => {
         return (
           <Coin

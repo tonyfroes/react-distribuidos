@@ -1,20 +1,29 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 * {
   box-sizing: border-box;
   text-align: center;
   margin: 0;
   padding: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: #fff;
 }
 
 .coin-app {
   background-color: rgb(0, 0, 0);
   min-height: 100vh;
+  padding: 40px 0;
 }
+
+.primary-text {
+  font-size: 80px;
+  font-weight: extrabold;
+  color: #fee715ff;
+  text-transform: uppercase;
+}
+
 .coin-search {
-  margin-bottom: 64px;
+  margin-bottom: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -28,43 +37,55 @@
 }
 
 .coin-input {
-  animation: color 9s infinite linear;
-  padding-left: 6px;
-  width: 300px;
+  padding-left: 10px;
+  text-align: left;
+  width: 900px;
   height: 50px;
   border-radius: 4px;
-  border: none;
-  background-image: linear-gradient(
-    -225deg,
-    #ac32e4 0%,
-    #7918f2 48%,
-    #4801ff 100%
-  );
-
-  color: #000000;
+  border: 1px solid #fee715ff;
+  color: #fee715ff;
+  background-color: #101820ff;
+  margin-bottom: 20px;
 }
 
 .coin-input::placeholder {
-  color: #020000;
+  color: #fee715ff;
+  font-size: 18px;
+  font-weight: 100;
 }
 
-@keyframes color {
-  0% {
-    background: #33cccc;
+.coin-tranding-bg {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 900px;
+  padding: 20px 0;
+  background-color: #101820ff;
+  margin: 20px auto 0 auto;
+  border-radius: 20px;
+  border: 1px solid #fee715ff;
+}
+
+@media (max-width: 1000px) {
+  .coin-input {
+    width: 90%;
   }
-  20% {
-    background: #33cc36;
+
+  .coin-input::placeholder {
+    font-size: 12px;
   }
-  40% {
-    background: #b8cc33;
+
+  .coin-tranding-bg {
+    width: 90%;
   }
-  60% {
-    background: #fcca00;
+  .primary-text {
+    font-size: 40px;
   }
-  80% {
-    background: #33cc36;
-  }
-  100% {
-    background: #33cccc;
+}
+
+@media (max-width: 400px) {
+  .primary-text {
+    font-size: 30px;
   }
 }
