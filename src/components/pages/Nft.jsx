@@ -17,6 +17,7 @@ function Nft() {
       })
       .catch((error) => console.log(error));
   }, []);
+  console.log(tokens);
 
   const handleChange = (e) => {
     setSearch(e.target.value);
@@ -40,15 +41,7 @@ function Nft() {
         </form>
       </div>
       {filteredTokens.map((token) => {
-        return (
-          <Token
-            key={token.id}
-            id={token.id}
-            name={token.name}
-            asset_platform_id={token.asset_platform_id}
-            symbol={token.symbol}
-          />
-        );
+        return <Token key={token.id} name={token.name} />;
       })}
     </div>
   );
