@@ -1,0 +1,21 @@
+.contato-app {
+  background-color: #1a1a1c;
+}
+
+.column-2 {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.color-font {
+  color: #0a0a0a;
+  font-size: 2em;
+}
+
+.font {
+  font-size: 1em;
+  color: rgb(21, 21, 22);
+}

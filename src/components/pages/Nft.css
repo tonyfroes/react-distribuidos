@@ -1,0 +1,59 @@
+.token-app {
+  background-color: #1a1a1c;
+  min-height: 100vh;
+}
+.token-search {
+  margin-bottom: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.token-text {
+  margin-bottom: 32px;
+  text-align: center;
+  padding-top: 1em;
+}
+
+.token-input {
+  animation: color 9s infinite linear;
+  padding-left: 6px;
+  width: 300px;
+  height: 50px;
+  border-radius: 4px;
+  border: none;
+  background-image: linear-gradient(
+    -225deg,
+    #ac32e4 0%,
+    #7918f2 48%,
+    #4801ff 100%
+  );
+
+  color: #000000;
+}
+
+.token-input::placeholder {
+  color: #020000;
+}
+
+@keyframes color {
+  0% {
+    background: #33cccc;
+  }
+  20% {
+    background: #33cc36;
+  }
+  40% {
+    background: #b8cc33;
+  }
+  60% {
+    background: #fcca00;
+  }
+  80% {
+    background: #33cc36;
+  }
+  100% {
+    background: #33cccc;
+  }
+}
