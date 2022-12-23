@@ -1,3 +1,8 @@
 .chart-container {
   background-color: black;
 }
+
+.my-6 {
+  min-height: 100vh;
+  background-color: black;
+}

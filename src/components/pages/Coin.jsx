@@ -3,6 +3,7 @@ import "./Coin.css";
 import { Link } from "react-router-dom";
 
 const Coin = ({
+  id,
   name,
   price,
   symbol,
@@ -14,7 +15,7 @@ const Coin = ({
   return (
     <div className="coin-container">
       <div className="coin-row">
-        <Link to={`/chart/`} target="_self">
+        <Link to="/chart" state={{ id: id.toLowerCase() }} target="_self">
           <div className="coin">
             <img src={image} alt="crypto" />
             <h1>{name}</h1>

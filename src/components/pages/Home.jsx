@@ -44,6 +44,7 @@ function Home() {
         return (
           <Coin
             key={coin.id}
+            id={coin.id}
             name={coin.name}
             image={coin.image}
             symbol={coin.symbol}
