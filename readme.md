@@ -19,5 +19,5 @@
 </ul><ul>
 <li>localhost:5173</li>
 </ul><h2>Project Status</h2>
-<hr><p>Completed</p><h2>Contact</h2>
+<hr><p>Completado</p><h2>Contact</h2>
 <hr><p><span style="margin-right: 30px;"></span><a href="https://github.com/tonyfroes"><img target="_blank" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" style="width: 10%;"></a></p>
