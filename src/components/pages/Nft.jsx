@@ -17,7 +17,6 @@ function Nft() {
       })
       .catch((error) => console.log(error));
   }, []);
-  console.log(tokens);
 
   const handleChange = (e) => {
     setSearch(e.target.value);
