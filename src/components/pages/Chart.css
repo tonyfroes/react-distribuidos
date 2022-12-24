@@ -1,22 +1,22 @@
 .chart-container {
-  background-color: black;
+  background-color: black; /* cor de fundo */
 }
 
 .coin-div-principal {
-  min-height: 100vh;
-  background-color: black;
+  min-height: 100vh; /* altura minima da div */
+  background-color: black; /* cor de fundo */
 }
 
 .principal-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  display: flex; /* display flex */
+  align-items: center; /* alinhamento vertical */
+  justify-content: center; /* alinhamento horizontal */
+  flex-direction: column; /* direção da coluna */
 }
 
 .texto-cripto {
-  border: 1px solid white;
-  border-radius: 20px;
-  padding: auto;
-  margin: auto;
+  border: 1px solid white; /* borda */
+  border-radius: 20px; /* borda arredondada */
+  padding: auto; /* padding */
+  margin: auto; /* margin */
 }

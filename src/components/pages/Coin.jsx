@@ -1,18 +1,19 @@
 import "./Coin.css";
 
 import { Link } from "react-router-dom";
-
+/* constante Coin com os dados de cada moeda */
 const Coin = ({
-  id,
-  name,
-  price,
-  symbol,
-  marketcap,
-  volume,
-  image,
-  priceChange,
+  id, // id da moeda
+  name, // nome da moeda
+  price, // preço da moeda
+  symbol, // símbolo da moeda
+  marketcap, // capitalização de mercado
+  volume, // volume de negociação
+  image, // imagem da moeda
+  priceChange, // variação de preço
 }) => {
   return (
+    /* Renderiza os dados de cada moeda */
     <div className="coin-container">
       <div className="coin-row">
         <Link to="/chart" state={{ id: id.toLowerCase() }} target="_self">
@@ -25,10 +26,10 @@ const Coin = ({
         <div className="coin-data">
           <p className="coin-price">${price}</p>
           <p className="coin-volume">${volume.toLocaleString()}</p>
-
-          {priceChange < 0 ? (
+          {priceChange < 0 ? ( // Se a variação de preço for menor que 0, renderiza o texto em vermelho
             <p className="coin-percent red">{priceChange.toFixed(2)}%</p>
           ) : (
+            // Se a variação de preço for maior que 0, renderiza o texto em verde
             <p className="coin-percent green">{priceChange.toFixed(2)}%</p>
           )}
 

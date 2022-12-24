@@ -1,78 +1,78 @@
 .coin-container {
-  display: flex;
-  justify-content: center;
+  display: flex; /* display flex */
+  justify-content: center; /* alinhamento horizontal */
 }
 
 .coin-container :hover {
-  background-color: #101820ff;
+  background-color: #101820ff; /* cor de fundo */
 }
 
 .coin-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
-  align-items: center;
-  height: 80px;
-  border-bottom: 1px solid #FEE715FF;
-  width: 900px;
+  display: flex; /* display flex */
+  flex-direction: row; /* direção da linha */
+  justify-content: start; /* alinhamento horizontal */
+  align-items: center; /* alinhamento vertical */
+  height: 80px; /* altura */
+  border-bottom: 1px solid #fee715ff; /* borda */
+  width: 900px; /* largura */
 }
 
 .coin {
-  display: flex;
-  align-items: center;
-  padding: 0 0.7em;
+  display: flex; /* display flex */
+  align-items: center; /* alinhamento vertical */
+  padding: 0 0.7em; /* padding */
 }
 
 .coin h1 {
-  font-size: 16px;
-  width: 150px;
+  font-size: 16px; /* tamanho da fonte */
+  width: 150px; /* largura */
 }
 
 .coin img {
-  height: 30px;
-  width: 30px;
-  margin-right: 10px;
+  height: 30px; /* altura */
+  width: 30px; /* largura */
+  margin-right: 10px; /* margin */
 }
 
 .coin-symbol {
-  text-transform: uppercase;
+  text-transform: uppercase; /* transformação do texto */
 }
 
 .coin-data {
-  display: flex;
-  flex-wrap: wrap;
-  text-align: right;
-  justify-content: space-between;
-  width: 100%;
+  display: flex; /* display flex */
+  flex-wrap: wrap; /* quebra de linha */
+  text-align: right; /* alinhamento do texto */
+  justify-content: space-between; /* alinhamento horizontal */
+  width: 100%; /* largura */
 }
 
 .coin-price {
-  width: 110px;
+  width: 110px; /* largura */
 }
 
 .coin-volume {
-  width: 155px;
+  width: 155px; /* largura */
 }
 
 .coin-marketcap {
-  width: 230px;
+  width: 230px; /* largura */
 }
 
 .coin-percent {
-  width: 100px;
+  width: 100px; /* largura */
 }
 
 .red {
-  color: #f00606;
+  color: #f00606; /* cor */
 }
 
 .green {
-  color: #11d811;
+  color: #11d811; /* cor */
 }
 
 @media (max-width: 1000px) {
   .coin-row {
-    flex-wrap: wrap;
-    width: 90%;
+    flex-wrap: wrap; /* quebra de linha */
+    width: 90%; /* largura */
   }
 }

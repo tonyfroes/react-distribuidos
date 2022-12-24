@@ -1,8 +1,8 @@
 .history-container {
-  background-color: black;
-  height: 50vh;
-  width: content-box;
-  align-items: center;
-  justify-content: center;
-  display: flex;
+  background-color: black; /* cor de fundo */
+  height: 50vh; /* altura da div */
+  width: content-box; /* largura da div */
+  align-items: center; /* alinhamento vertical */
+  justify-content: center; /* alinhamento horizontal */
+  display: flex; /* display flex */
 }

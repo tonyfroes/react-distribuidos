@@ -1,3 +1,4 @@
+/*Importando os componentes*/
 import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 import Home from "./components/pages/Home";
 import Sobre from "./components/pages/Sobre";
@@ -6,8 +7,10 @@ import Footer from "./layout/Footer";
 import Nft from "./components/pages/Nft";
 import Chart from "./components/pages/Chart";
 
+/*função App*/
 function App() {
   return (
+    /*Renderizando os componentes*/
     <Router>
       <Navbar />
       <Routes>

@@ -1,16 +1,16 @@
 .cointrending-container {
-  display: inline-block;
-  padding: 0.8em;
+  display: inline-block; /* display inline-block */
+  padding: 0.8em; /* padding */
 }
 
 .title {
-  color: #fee715ff;
-  font-weight: bold;
-  margin: 4px 0;
-  font-size: 1.8vh;
+  color: #fee715ff; /* cor */
+  font-weight: bold; /* peso da fonte */
+  margin: 4px 0; /* margin */
+  font-size: 1.8vh; /* tamanho da fonte */
 }
 
 .subtitle {
-  font-weight: 100;
-  font-size: 1.6vh;
+  font-weight: 100; /* peso da fonte */
+  font-size: 1.6vh; /* tamanho da fonte */
 }

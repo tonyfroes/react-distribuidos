@@ -1,3 +1,4 @@
+/* todos os imports */
 import useAxios from "./hooks/useAxios.jsx";
 import "./History.css";
 import {
@@ -15,6 +16,7 @@ import { Line } from "react-chartjs-2";
 import moment from "moment";
 import { useLocation } from "react-router-dom";
 
+/* Registra os plugins do ChartJS */
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -26,15 +28,17 @@ ChartJS.register(
   Legend
 );
 
+/* constante HistoryChart com os dados de cada moeda */
 const HistoryChart = () => {
-  const location = useLocation();
-  const { id } = location.state;
+  const location = useLocation(); // Pega o id da moeda
+  const { id } = location.state; // Pega o id da moeda
   const { response } = useAxios(
+    // Pega os dados da API
     `coins/${id}/market_chart?vs_currency=usd&days=7`
   );
-  console.log("NOME DO ID PORRA : " + id);
 
   if (!response) {
+    // Se não tiver dados, renderiza o texto "Carregando..."
     return (
       <div className="wrapper-container mt-8">
         <h1>Carregando...</h1>
@@ -42,27 +46,31 @@ const HistoryChart = () => {
     );
   }
   const coinChartData = response.prices.map((value) => ({
+    // Pega os dados da API
     x: value[0],
     y: value[1].toFixed(2),
   }));
 
   const options = {
-    responsive: true,
+    // Configurações do ChartJS
+    responsive: true, // Responsivo
   };
   const data = {
+    // Dados do ChartJS
     labels: coinChartData.map((value) => moment(value.x).format("MMM DD")),
     datasets: [
       {
-        fill: true,
-        label: id,
-        data: coinChartData.map((val) => val.y),
-        borderColor: "rgb(53, 162, 235)",
-        backgroundColor: "rgba(53, 162, 235, 0.5)",
+        fill: true, // Preenche o gráfico
+        label: id, // Nome da moeda
+        data: coinChartData.map((val) => val.y), // Dados da moeda
+        borderColor: "rgb(53, 162, 235)", // Cor da borda
+        backgroundColor: "rgba(53, 162, 235, 0.5)", // Cor de fundo
       },
     ],
   };
 
   return (
+    // Renderiza o gráfico
     <div className="history-container">
       <Line options={options} data={data} />
     </div>

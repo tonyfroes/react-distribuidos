@@ -1,3 +1,4 @@
+/* todos os imports */
 import "./Home.css";
 import Coin from "./Coin.jsx";
 import { useState, useEffect } from "react";
@@ -5,12 +6,14 @@ import axios from "axios";
 import useAxios from "./hooks/useAxios";
 import CoinTrending from "./CoinTrending";
 
+/* constante Home com os dados de cada moeda */
 function Home() {
-  const [coins, setCoins] = useState([]);
-  const [search, setSearch] = useState("");
-  const { response, loading } = useAxios("search/trending");
+  const [coins, setCoins] = useState([]); // Dados da API
+  const [search, setSearch] = useState(""); // Dados da API
+  const { response, loading } = useAxios("search/trending"); // Dados da API
 
   useEffect(() => {
+    // Pega os dados da API
     axios
       .get(
         "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false"
@@ -22,13 +25,16 @@ function Home() {
   }, []);
 
   const handleChange = (e) => {
+    // handleChange para o input
     setSearch(e.target.value);
   };
 
   const filteredCoins = coins.filter((coin) =>
+    // Filtra os dados da API
     coin.name.toLowerCase().includes(search.toLowerCase())
   );
   if (loading) {
+    // Se não tiver dados, renderiza o texto "Carregando..."
     return (
       <div className="wrapper-container mt-8">
         <h1>Carregando...</h1>
@@ -37,6 +43,7 @@ function Home() {
   }
 
   return (
+    // Renderiza os dados de cada moeda
     <div className="coin-app">
       <div className="coin-search">
         <div className="trending-coin">
