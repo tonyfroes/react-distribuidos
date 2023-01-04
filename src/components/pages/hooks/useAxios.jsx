@@ -21,11 +21,12 @@ const useAxios = (param) => {
       setLoading(false);
     }
   };
-
+  /*chama a função fetchData quando o componente é montado */
   useEffect(() => {
     fetchData(param);
   }, []);
 
+  /*retorna os dados, loading e error */
   return {
     response,
     loading,
